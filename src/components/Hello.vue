@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <header></header>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <p v-text="a"></p>
@@ -20,6 +21,7 @@
 </template>
 
 <script>
+import header from './header/header'
 export default {
   name: 'hello',
   data () {
@@ -47,6 +49,9 @@ export default {
     doThis () {
       this.isShow = !this.isShow
     }
+  },
+  components: {
+    header
   }
 }
 </script>
